@@ -10,4 +10,12 @@ public class Movies {
         Genre = genre;
         Rating = rating;
     }
+
+     public void AddScore(double score) {
+        if (score < 0 || score > 10) {
+            return;
+        }
+
+        Rating = (Rating + score) / 2;
+    }
 }
